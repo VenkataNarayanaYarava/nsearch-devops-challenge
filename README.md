@@ -24,13 +24,30 @@
 ● What would you suggest for Infrastructure as code, testing and deploying changes
 
 
-#########################################################################################
+
 ***AGENDA:***
 
 As we are migrating from Onprem to AWS cloud, as a first step we can host our applications in Instances and using the aws PAAS services. Later once application is stable we can move to K8S(container level deployment).
 
 In this implementations, I have added the other aws services to make architecutre work and application dependency level we may use in our two tier application.
 
+AWS Services we are using in this architecture are:
+
+    1. Amazon EC2 (Elastic Compute Cloud)
+	
+    2. Amazon RDS (Relational Database Service)
+
+    3. Amazon Cloudfront (Content Delivery Network)
+
+    4. Amazon S3 (For static content storage)
+
+    5. Amazon ELB (Elastic Load Balancer)
+
+    6. Amazon Route53 (Managed DNS Service)
+
+    7. Auto Scaling Group at Web Tier
+
+	
 ***ARCHITECTURE:***
 
 ![](./Challenge1/Architecture.png)
