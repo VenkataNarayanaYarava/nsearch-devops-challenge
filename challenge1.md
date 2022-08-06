@@ -1,6 +1,3 @@
-# nsearch-devops-challenge
-
-
 #### Requirement
 
 A private isolated network which would best suit Symbiosis’s 2 tier architecture needs.
@@ -31,7 +28,7 @@ In this implementations, I have added the other aws services to make architecutr
 
 ***ARCHITECTURE:***
 
-![](./Challenge1/Architecture.png)
+![](./Architecture.png)
 
 As per the requirement I understood below points.
 
@@ -80,7 +77,7 @@ As per the requirement I understood below points.
 	  
 	  - Below is the different phases/stages we used to automate entire application Build and Deployment process.
 	  
-      ![](./Challenge1/DevOps-Process.png)
+      ![](./DevOps-Process.png)
 	  
 	  
 11. What would you suggest for Infrastructure as code, testing and deploying changes

@@ -1,0 +1,38 @@
+#### nginxdemos app ####
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: nginxdemos-app
+
+spec:
+  selector:
+    matchLabels:
+      app: nginxdemos-app
+  replicas: 1 # tells deployment to run 1 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: nginxdemos-app
+    spec:
+      containers:
+      - name: nginxdemos-application
+        image: nginxdemos/hello
+        ports:
+        - containerPort: 80
+
+---
+# https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service
+kind: Service
+apiVersion: v1
+metadata:
+  name: svc-nginxdemos-app
+
+spec:
+  selector:
+    app: nginxdemos-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: NodePort
