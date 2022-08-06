@@ -3,15 +3,24 @@
 
 #### Requirement
 
-● A private isolated network which would best suit Symbiosis’s 2 tier architecture needs. In order to meet their internal SLAs, they require a highly available solution as well.
-● Symbiosis being a B2C company, would typically like its web applications to be accessible over the internet and thus handle HTTP traffic.
+● A private isolated network which would best suit company’s 2 tier architecture needs. In order to meet their internal SLAs, they require a highly available solution as well.
+
+● company being a B2C company, would typically like its web applications to be accessible over the internet and thus handle HTTP traffic.
+
 ● The database tier should have restricted access (not open to HTTP) and allow traffic only through the web tier.
+
 ● They would like to reduce the administrative burden of managing their SQL database and require a managed database for their SQL engine in the proposed solution. They need the database to be highly available.
+
 ● Currently they experience medium to high traffic on their network. How can they scale their application to meet demand?
+
 ● Effective distribution of load
+
 ● Recommend logging metrics collection and monitoring
+
 ● Recommend a DevOps pipeline
+
 ● Recommend types of testing methodology and tools(if applicable) Suggest software packaging, distribution and deployment mechanism
+
 ● What would you suggest for Infrastructure as code, testing and deploying changes
 
 
@@ -31,14 +40,14 @@ As per the requirement I understood below points.
 1. Out application is working in Tier 2 architecture model. These we are currently running in onprem servers/infrastructure.
 2. Based on inputs, we are migrating our entire infra and application hosting to AWS Public Cloud. Lets start evaluating each step/phase in our requirement.
 
-3. A private isolated network which would best suit Symbiosis’s 2 tier architecture needs. In order to meet their internal SLAs, they require a highly available solution as well. 
+3. A private isolated network which would best suit company’s 2 tier architecture needs. In order to meet their internal SLAs, they require a highly available solution as well. 
 
       - Yes, as we hosted in our onprem here also we can create our private VPC(Virtual Private Cloud) network to host our application.
 	  - Next step how we can make highly available and to serve the high traffic distribution, here we can use the EC2 instance to host application and add those instances to auto scaling group with ELB(Elastic Load Balancer). 
 	  - Auto scaling group helps to scale the availability through Vertical autoscaling method or Horigental autoscaling.
 	  - On High Availability, we will be hosting our web servers in two different availability zones so that if one availability zone goes down also still all requests take to other zone instance. This handeling will be taking care by Load Balancer.
 	  
-4. Symbiosis being a B2C company, would typically like its web applications to be accessible over the internet and thus handle HTTP traffic.
+4. company being a B2C company, would typically like its web applications to be accessible over the internet and thus handle HTTP traffic.
 
       - Here, we will use the EC2 instances on back of ELB. ELB helps to take the request directly from internet with specific DNS zones and distribute the request to Webservers based on algoritham/methods in Load balancers like Round Robin, Least Conn...
 	  - As we are keeping our ELB infront of Webservers, it will restrict the access to servers from internet on requests. One more benifit we can configure the domain in LB and restrict the public ip expose. It will reduce the risk to servers.
