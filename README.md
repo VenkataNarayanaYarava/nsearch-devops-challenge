@@ -71,14 +71,14 @@ As per the requirement I understood below points.
 
 5. The database tier should have restricted access (not open to HTTP) and allow traffic only through the web tier.
  
-      - As a security measurement, we should always restrict our Database to internet. All the data request and response can process through Web servers only.
+      - As a security measurement, we should always restrict our Database access to internet. All the data request and response can process to database through Web servers only from internet.
 	  - As it is in backend layer need to configure all the response or communication can go through TCP network layer level.
 	  
 6. They would like to reduce the administrative burden of managing their SQL database and require a managed database for their SQL engine in the proposed solution. They need the database to be highly available.
 
       - For this purpose, we have PAAS database service in AWS is RDS. This will reduce the much burdon to administrators to manage. Because AWS will take care of platform level maintanance we just need to use the platform and need to manage it on Database level.
 	  - For Highly available of our data, we will be replicating all our data to other RDS. we can say Primary RDS database and Secondary RDS Database.
-	     Can share clearly in our Architecutre Diagram below.
+	     Can see in our Architecutre Diagram.
 		 
 7. Currently they experience medium to high traffic on their network. How can they scale their application to meet demand?
 
@@ -91,7 +91,7 @@ As per the requirement I understood below points.
 	  
 9. Recommend logging metrics collection and monitoring
 
-      - There are many metrics based on requirement, if need request logs, response logs we can use Cloud Watch. For log aggregation we can use EFK or ELK. And any application level transaction or request logs we can use Dynadrace for better understanding.
+      - There are many metrics based on requirement, if need request logs, response logs we can use Cloud Watch. For log aggregation we can use EFK or ELK. And any application level transaction or request logs we can use Dynatrace for better understanding.
 	  
 10. Recommend a DevOps pipeline && Recommend types of testing methodology and tools(if applicable) Suggest software packaging, distribution and deployment mechanism
     
