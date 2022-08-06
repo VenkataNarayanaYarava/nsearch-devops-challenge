@@ -3,22 +3,15 @@
 
 #### Requirement
 
-A private isolated network which would best suit Symbiosis’s 2 tier architecture needs.
-In order to meet their internal SLAs, they require a highly available solution as well.
-● Symbiosis being a B2C company, would typically like its web applications to be
-accessible over the internet and thus handle HTTP traffic.
-● The database tier should have restricted access (not open to HTTP) and allow traffic
-only through the web tier.
-● They would like to reduce the administrative burden of managing their SQL database
-and require a managed database for their SQL engine in the proposed solution. They
-need the database to be highly available.
-● Currently they experience medium to high traffic on their network. How can they scale
-their application to meet demand?
+● A private isolated network which would best suit Symbiosis’s 2 tier architecture needs. In order to meet their internal SLAs, they require a highly available solution as well.
+● Symbiosis being a B2C company, would typically like its web applications to be accessible over the internet and thus handle HTTP traffic.
+● The database tier should have restricted access (not open to HTTP) and allow traffic only through the web tier.
+● They would like to reduce the administrative burden of managing their SQL database and require a managed database for their SQL engine in the proposed solution. They need the database to be highly available.
+● Currently they experience medium to high traffic on their network. How can they scale their application to meet demand?
 ● Effective distribution of load
 ● Recommend logging metrics collection and monitoring
 ● Recommend a DevOps pipeline
-● Recommend types of testing methodology and tools(if applicable) Suggest software
-packaging, distribution and deployment mechanism
+● Recommend types of testing methodology and tools(if applicable) Suggest software packaging, distribution and deployment mechanism
 ● What would you suggest for Infrastructure as code, testing and deploying changes
 
 
