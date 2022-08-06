@@ -27,7 +27,7 @@
 
 ***AGENDA:***
 
-As we are migrating from Onprem to AWS cloud, as a first step we can host our applications in Instances and using the aws PAAS services. Later once application is stable we can move to K8S(container level deployment).
+As we are migrating from Onprem to AWS cloud, as a first step we can host our applications in Instances and using the aws services. Later once application is stable we can move to K8S(container level deployment).
 
 In this implementations, I have added the other aws services to make architecutre work and application dependency level we may use in our two tier application.
 
@@ -54,14 +54,14 @@ AWS Services we are using in this architecture are:
 
 As per the requirement I understood below points.
 
-1. Out application is working in Tier 2 architecture model. These we are currently running in onprem servers/infrastructure.
+1. Our application is working in Tier 2 architecture model. These we are currently running in onprem servers/infrastructure.
 2. Based on inputs, we are migrating our entire infra and application hosting to AWS Public Cloud. Lets start evaluating each step/phase in our requirement.
 
 3. A private isolated network which would best suit company’s 2 tier architecture needs. In order to meet their internal SLAs, they require a highly available solution as well. 
 
       - Yes, as we hosted in our onprem here also we can create our private VPC(Virtual Private Cloud) network to host our application.
 	  - Next step how we can make highly available and to serve the high traffic distribution, here we can use the EC2 instance to host application and add those instances to auto scaling group with ELB(Elastic Load Balancer). 
-	  - Auto scaling group helps to scale the availability through Vertical autoscaling method or Horigental autoscaling.
+	  - Auto scaling group helps to scale the availability through Vertical autoscaling method or Horizontal autoscaling.
 	  - On High Availability, we will be hosting our web servers in two different availability zones so that if one availability zone goes down also still all requests take to other zone instance. This handeling will be taking care by Load Balancer.
 	  
 4. company being a B2C company, would typically like its web applications to be accessible over the internet and thus handle HTTP traffic.
@@ -82,7 +82,7 @@ As per the requirement I understood below points.
 		 
 7. Currently they experience medium to high traffic on their network. How can they scale their application to meet demand?
 
-      - For this, usually we have two different types of autoscaling groups 1. Vertical Autoscaling Group and 2. Horigental Autoscaling group.
+      - For this, usually we have two different types of autoscaling groups 1. Vertical Autoscaling Group and 2. Horizontal Autoscaling group.
 	  - We can select based on our traffic or usage , these ASG we will add to instances LB.
 	  
 8. Effective distribution of load
