@@ -3,25 +3,25 @@
 
 #### Requirement
 
-● A private isolated network which would best suit company’s 2 tier architecture needs. In order to meet their internal SLAs, they require a highly available solution as well.
+ -> A private isolated network which would best suit company’s 2 tier architecture needs. In order to meet their internal SLAs, they require a highly available solution as well.
 
-● company being a B2C company, would typically like its web applications to be accessible over the internet and thus handle HTTP traffic.
+ -> company being a B2C company, would typically like its web applications to be accessible over the internet and thus handle HTTP traffic.
 
-● The database tier should have restricted access (not open to HTTP) and allow traffic only through the web tier.
+ -> The database tier should have restricted access (not open to HTTP) and allow traffic only through the web tier.
 
-● They would like to reduce the administrative burden of managing their SQL database and require a managed database for their SQL engine in the proposed solution. They need the database to be highly available.
+ -> They would like to reduce the administrative burden of managing their SQL database and require a managed database for their SQL engine in the proposed solution. They need the database to be highly available.
 
-● Currently they experience medium to high traffic on their network. How can they scale their application to meet demand?
+ -> Currently they experience medium to high traffic on their network. How can they scale their application to meet demand?
 
-● Effective distribution of load
+ -> Effective distribution of load
 
-● Recommend logging metrics collection and monitoring
+ -> Recommend logging metrics collection and monitoring
 
-● Recommend a DevOps pipeline
+ -> Recommend a DevOps pipeline
 
-● Recommend types of testing methodology and tools(if applicable) Suggest software packaging, distribution and deployment mechanism
+ -> Recommend types of testing methodology and tools(if applicable) Suggest software packaging, distribution and deployment mechanism
 
-● What would you suggest for Infrastructure as code, testing and deploying changes
+ -> What would you suggest for Infrastructure as code, testing and deploying changes
 
 
 
@@ -33,19 +33,19 @@ In this implementations, I have added the other aws services to make architecutr
 
 AWS Services we are using in this architecture are:
 
-    1. Amazon EC2 (Elastic Compute Cloud)
+  1. Amazon EC2 (Elastic Compute Cloud)
 	
-    2. Amazon RDS (Relational Database Service)
+  2. Amazon RDS (Relational Database Service)
 
-    3. Amazon Cloudfront (Content Delivery Network)
+  3. Amazon Cloudfront (Content Delivery Network)
 
-    4. Amazon S3 (For static content storage)
+  4. Amazon S3 (For static content storage)
 
-    5. Amazon ELB (Elastic Load Balancer)
+  5. Amazon ELB (Elastic Load Balancer)
 
-    6. Amazon Route53 (Managed DNS Service)
+  6. Amazon Route53 (Managed DNS Service)
 
-    7. Auto Scaling Group at Web Tier
+  7. Auto Scaling Group at Web Tier
 
 	
 ***ARCHITECTURE:***
